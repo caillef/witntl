@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Workshop 2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- script tag is where Javascript goes to -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	 crossorigin="" />
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="row title">When is the next train leaving ?</h1>
+		<div class="row">
+			<div class="col-6 left-tab">
+				<p>
+					<select id="stationsList"></select>
+					<button id="btnLocation" onclick="selectNearestStation()">Find nearest station 📍</button>		
+				</p>
+				<div id="trainsList"></div>
+			</div>
+			<div id="map" class="col-6"></div>			
+		</div>
+	</div>
+
+	<!-- Make sure you put this AFTER Leaflet's CSS -->
+	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+	 crossorigin=""></script>
+	<script src="js/leafletmap.js"></script>
+	<script src="js/digitraffic.js"></script>
+	<script src="js/traffic.js"></script>
+</body>
+
+</html>
